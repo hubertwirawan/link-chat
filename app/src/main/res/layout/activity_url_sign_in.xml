@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// # COMP 4521    #  KENT, KEVIN      20558962        KKENT@CONNECT.UST.HK
+// # COMP 4521    # KONSTANTINO, HUBERT ADITYA 20560123 HAK@CONNECT.UST.HK
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linkchat.firebase.android.chatapp.MenuActivity"
+    android:layout_centerVertical="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+        <LinearLayout
+            android:id="@+id/waitingRoom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Waiting for other user to join room"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/urlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="Enter Other User ID..."
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/startChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Chat"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <Button
+            android:id="@+id/copyUrlButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:text="Copy Your User ID" />
+        <TextView
+            android:id="@+id/urlIdHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:text = "Generated User ID:"
+            />
+        <TextView
+            android:id="@+id/urlId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text = ""
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
